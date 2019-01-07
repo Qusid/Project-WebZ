@@ -26,7 +26,7 @@
 
     Absolute("CC", "OOP", "OOP", "OOP","OOP_CC","pr2_OOP");
 
-    Absolute("CRY", "OOP", "OOP", "OOP","OOP_CRY","pr2_OOP");
+    Absolute("CRY", "OOP", "OOP", "OOP","OOP_CRYP","pr2_OOP");
 
     Absolute("SE", "OOP", "OOP", "OOP","OOP_SE","pr2_OOP");
 
@@ -79,10 +79,10 @@ function Hover_out(string1, string2, string3, string4, string5,string6, string7)
         $("#" + string5).css("color", "white").css("opacity", 0.3);
         $("#" + string5).css("background-color", "green");
         $("#" + string5).css("font-weight", "normal");
-        $("#" + string6).css("stroke", "green")
-        $("#" + string6).css("opacity", "0.1")
-        $("#" + string7).css("stroke", "green")
-        $("#" + string7).css("opacity", "0.1")
+        $("#" + string6).css("stroke", "red")
+        $("#" + string6).css("opacity", "0")
+        $("#" + string7).css("stroke", "red")
+        $("#" + string7).css("opacity", "0")
 
     });
 
