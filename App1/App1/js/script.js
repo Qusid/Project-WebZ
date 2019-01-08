@@ -55,9 +55,9 @@ function Hover_over(string1, string2, string3, string4, string5, string6, string
         $("#" + string5).css("background-color", "lightgreen");
         $("#" + string5).css("color", "black").css("opacity", 1);
         $("#" + string5).css("font-weight", "bold");
-        $("#" + string6).css("stroke", "blue")
+        $("#" + string6).css("stroke", "green")
         $("#" + string6).css("opacity", "1")
-        $("#" + string7).css("stroke", "blue")
+        $("#" + string7).css("stroke", "black")
         $("#" + string7).css("opacity", "1")
     });
 
@@ -68,21 +68,21 @@ function Hover_out(string1, string2, string3, string4, string5,string6, string7)
     $("#" + string1).mouseout(function () {
         $("#" + string1).css("font-weight", "normal");
         $("#" + string2).css("background-color", "green");
-        $("#" + string2).css("color", "white").css("opacity", 0.3);
+        $("#" + string2).css("color", "white").css("opacity", 1);
         $("#" + string2).css("font-weight", "normal");
-        $("#" + string3).css("color", "white").css("opacity", 0.3);
+        $("#" + string3).css("color", "white").css("opacity", 1);
         $("#" + string3).css("background-color", "green");
         $("#" + string3).css("font-weight", "normal");
-        $("#" + string4).css("color", "white").css("opacity", 0.3);
+        $("#" + string4).css("color", "white").css("opacity", 1);
         $("#" + string4).css("background-color", "green");
         $("#" + string4).css("font-weight", "normal");
-        $("#" + string5).css("color", "white").css("opacity", 0.3);
+        $("#" + string5).css("color", "white").css("opacity", 1);
         $("#" + string5).css("background-color", "green");
         $("#" + string5).css("font-weight", "normal");
         $("#" + string6).css("stroke", "red")
-        $("#" + string6).css("opacity", "0")
-        $("#" + string7).css("stroke", "red")
-        $("#" + string7).css("opacity", "0")
+        $("#" + string6).css("opacity", "1")
+        $("#" + string7).css("stroke", "orange")
+        $("#" + string7).css("opacity", "1")
 
     });
 

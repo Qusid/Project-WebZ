@@ -17,7 +17,7 @@
   width: 180px;
   height: 40px;
   display: block;
-  opacity: 0.3;
+  opacity: 1;
   margin-bottom: 10px;
   height: 60px; 
 }
@@ -81,7 +81,7 @@ left: 600px;
 
 
 .hoverd{
-  opacity: 0.05; 
+  opacity: 1; 
 }
 
 .hoverd:hover{
