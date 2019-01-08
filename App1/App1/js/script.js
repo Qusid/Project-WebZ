@@ -16,23 +16,23 @@
 
     Absolute("TOC", "DSA", "DM", "DM", "DM_DSA_AD","DM_DSA_AD");
     
-    Absolute("CDS", "DSA", "DSA", "DSA","DSA_CDS","pr2_DSA");
+    Absolute("CDS", "DSA", "DSA", "DSA","DSA","DSA_CDS","pr2_DSA");
     
-    Absolute("PL", "DSA", "DSA", "DSA", "DSA_PL", "pr2_DSA");
+    Absolute("PL", "DSA", "DSA", "DSA", "DSA", "DSA_PL", "pr2_DSA");
     
-    Absolute("AI", "DSA", "DSA", "DSA", "DSA_AI", "pr2_DSA");
+    Absolute("AI", "DSA", "DSA", "DSA", "DSA", "DSA_AI", "pr2_DSA");
 
-    Absolute("OS", "DSA", "CA", "AS","AS_OS","CA_OS");
+    Absolute("OS", "DSA", "CA", "AS", "AS", "AS_OS","CA_OS");
 
-    Absolute("CC", "OOP", "OOP", "OOP","OOP_CC","pr2_OOP");
+    Absolute("CC", "OOP", "OOP", "OOP","OOP", "OOP_CC","pr2_OOP");
 
-    Absolute("CRY", "OOP", "OOP", "OOP","OOP_CRYP","pr2_OOP");
+    Absolute("CRY", "OOP", "OOP", "OOP","OOP", "OOP_CRYP","pr2_OOP");
 
-    Absolute("SE", "OOP", "OOP", "OOP","OOP_SE","pr2_OOP");
+    Absolute("SE", "OOP", "OOP", "OOP","OOP", "OOP_SE","pr2_OOP");
 
-    Absolute("BD", "OOP", "OOP", "OOP", "OOP_BD", "pr2_OOP");
+    Absolute("BD", "OOP", "OOP", "OOP","OOP", "OOP_BD", "pr2_OOP");
 
-    Absolute("DBM", "OOP", "OOP", "OOP","OOP_DBM", "pr2_OOP");
+    Absolute("DBM", "OOP", "OOP", "OOP", "OOP","OOP_DBM", "pr2_OOP");
 
 });
 function Absolute(string1, string2, string3, string4, string5, string6,string7) {
@@ -55,9 +55,9 @@ function Hover_over(string1, string2, string3, string4, string5, string6, string
         $("#" + string5).css("background-color", "lightgreen");
         $("#" + string5).css("color", "black").css("opacity", 1);
         $("#" + string5).css("font-weight", "bold");
-        $("#" + string6).css("stroke", "green")
+        $("#" + string6).css("stroke", "orange")
         $("#" + string6).css("opacity", "1")
-        $("#" + string7).css("stroke", "black")
+        $("#" + string7).css("stroke", "orange")
         $("#" + string7).css("opacity", "1")
     });
 
@@ -79,9 +79,9 @@ function Hover_out(string1, string2, string3, string4, string5,string6, string7)
         $("#" + string5).css("color", "white").css("opacity", 1);
         $("#" + string5).css("background-color", "green");
         $("#" + string5).css("font-weight", "normal");
-        $("#" + string6).css("stroke", "red")
+        $("#" + string6).css("stroke", "blue")
         $("#" + string6).css("opacity", "1")
-        $("#" + string7).css("stroke", "orange")
+        $("#" + string7).css("stroke", "blue")
         $("#" + string7).css("opacity", "1")
 
     });
