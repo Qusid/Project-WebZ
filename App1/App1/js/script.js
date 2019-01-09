@@ -1,58 +1,119 @@
 ﻿$(document).ready(function () {
 
-    Absolute("pr2", "DSA", "CA", "AS", "MC", "OOP");
-    Absolute_path("pr2", "pr2_DSA", "pr2_CA","pr2_AS","pr2_MC","pr2_OOP");
+    array = ["PR2","DM","DSA","CA","AS","MC","OOP","AD","TOC","CDS","PL","AI","OS","CC","CRY","SE","BD","DBM"];
 
-    Absolute("DSA", "pr2", "CDS", "PL","AI");
-    Absolute_path("DSA","pr2_DSA", "pr2_DSA");
+    buttons = [
+    ["DSA", "CA", "AS", "MC", "OOP"],
+    [ "PR2", "CDS", "PL","AI"],
+    ["PR2"],
+    ["PR2"], // CA
+    ]
 
-    Absolute("CA", "pr2", "pr2", "pr2");
-    Absolute_path("CA","pr2_CA", "pr2_CA");
-
-    Absolute("AS", "pr2", "pr2", "pr2");
-    Absolute_path( "AS","pr2_AS", "pr2_AS");
-
-    Absolute("MC", "pr2", "pr2", "pr2");
-    Absolute_path("MC","pr2_MC", "pr2_MC");
-
-    Absolute("OOP","pr2", "CC", "CRY", "SE","BD","DBM");
-    Absolute_path("OOP","pr2_OOP","OOP_CC","OOP_CRYP","OOP_SE","OOP_BD","OOP_DBM");
+    /*
+    for (var i = 0; i < array.length; i++) {
+        $("#" + array[i]).hover(
+        function(){PreReqsON("CA","AS","DSA");},
+        function(){PrereqsOFF("CA","AS","DSA");});
+    }
+    //*/
 
 
-    Absolute("AD", "DSA", "DM", "DM");
-    Absolute_path("AD","DM_DSA_AD", "DM_DSA_TOC");
+    $("#OOP").mouseover(function(){
+        $(this).css("background-color","blue");
 
-    Absolute("TOC", "DSA", "DM", "DM");
-    Absolute_path("TOC","DM_DSA_AD", "DM_DSA_AD");
-    
-    Absolute("CDS", "DSA", "DSA", "DSA", "DSA");
-    Absolute_path("CDS","DSA_CDS", "pr2_DSA");
-    
-    Absolute("PL", "DSA", "DSA", "DSA", "DSA");
-    Absolute_path("PL","DSA_PL", "pr2_DSA");
-    
-    Absolute("AI", "DSA", "DSA", "DSA", "DSA");
-    Absolute_path("AI","DSA_AI", "pr2_DSA");
+    });
 
-    Absolute("OS", "DSA", "CA", "AS", "AS" );
-    Absolute_path("OS","AS_OS", "CA_OS");
 
-    Absolute("CC", "OOP", "OOP", "OOP", "OOP");
-    Absolute_path("CC","OOP_CC", "pr2_OOP");
+    $("#OS").hover(
+        function(){PreReqsON("CA","AS","DSA");PreLinksON("DSA_OS","CA_OS","AS_OS")},
+        function(){PrereqsOFF("CA","AS","DSA");PreLinksOFF("DSA_OS","CA_OS","AS_OS")}
+        );
 
-    Absolute("CRY", "OOP", "OOP", "OOP", "OOP");
-    Absolute_path("CRY","OOP_CRYP", "pr2_OOP");
 
-    Absolute("SE", "OOP", "OOP", "OOP", "OOP");
-    Absolute_path("SE","OOP_SE", "pr2_OOP");
+    $("#DSA").hover(
+        function(){PreReqsON("PR2");PostReqsON("CDS","PL","AI");PreLinksON("PR2_DSA");PostLinksON("SDA_AD","DSA_TOC","DSA_CDS","DSA_PL","DSA_AI");},
+        function(){PrereqsOFF("PR2");PostReqsOFF("CDS","PL","AI");PreLinksOFF("PR2_DSA");PostLinksOFF("SDA_AD","DSA_TOC","DSA_CDS","DSA_PL","DSA_AI");}
+        );
 
-    Absolute("BD", "OOP", "OOP", "OOP", "OOP");
-    Absolute_path("BD","OOP_BD", "pr2_OOP");
 
-    Absolute("DBM", "OOP", "OOP", "OOP", "OOP");
-    Absolute_path("DBM","OOP_DBM", "pr2_OOP");
+
 
 });
+
+// ------------ BUTTON FUNCTIONS
+
+function PreReqsON(){
+    for (var i = arguments.length - 1; i >= 0; i--) {
+        $("#" + arguments[i]).css("font-weight", "bold").css("color","black").css("background-color", "lightgreen");
+    }
+}
+
+function PrereqsOFF(){
+    for (var i = arguments.length - 1; i >= 0; i--) {
+        $("#" + arguments[i]).css("font-weight", "normal").css("color","white").css("background-color", "teal");
+    }
+}
+
+
+
+
+function PostReqsON(){
+    for (var i = arguments.length - 1; i >= 0; i--) {
+        $("#" + arguments[i]).css("font-weight", "bold").css("color","black").css("background-color", "orange");
+    }
+}
+
+function PostReqsOFF(){
+    for (var i = arguments.length - 1; i >= 0; i--) {
+        $("#" + arguments[i]).css("font-weight", "normal").css("color","white").css("background-color", "teal");
+    }
+}
+
+
+
+// -------- LINKS FUNCTIONS
+
+
+
+
+function PreLinksON(){
+    for (var i = arguments.length - 1; i >= 0; i--) {
+        $("#" + arguments[i]).css("stroke", "black").css("opacity", "1").css("strokeWidth", "6");
+    }
+}
+
+
+function PreLinksOFF(){
+   for (var i = arguments.length - 1; i >= 0; i--) {
+        $("#" + arguments[i]).css("stroke", "black").css("opacity", "1").css("strokeWidth", "3");
+    }
+}
+
+
+function PostLinksON(){
+   for (var i = arguments.length - 1; i >= 0; i--) {
+        $("#" + arguments[i]).css("stroke", "black").css("opacity", "1").css("strokeWidth", "8");
+    }
+}
+
+function PostLinksOFF(){
+   for (var i = arguments.length - 1; i >= 0; i--) {
+        $("#" + arguments[i]).css("stroke", "black").css("opacity", "1").css("strokeWidth", "3");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 function Absolute(string1, string2, string3, string4, string5, string6,string7) {
     Hover_over(string1, string2, string3, string4, string5, string6, string7);
     Hover_out(string1, string2, string3, string4, string5, string6, string7);
@@ -98,6 +159,7 @@ function Hover_out(string1, string2, string3, string4, string5,string6, string7)
         $("#" + string2).css("background-color", "teal");
         $("#" + string2).css("color", "white").css("opacity", 1);
         $("#" + string2).css("font-weight", "normal");
+
         $("#" + string3).css("color", "white").css("opacity", 1);
         $("#" + string3).css("background-color", "teal");
         $("#" + string3).css("font-weight", "normal");
@@ -153,5 +215,60 @@ function Hoverout_path(string1, string2, string3, string4, string5, string6, str
         $("#" + string7).css("stroke", "indigo");
         $("#" + string7).css("opacity", "1");
     });
+
+}
+
+function Highlight(string1) {
+
+
+     $("#" + string1).css("background-color", "lightgreen").css("color", "black").css("opacity", 1).css("font-weight", "bold");   
+   /* 
+    for (var i = 0; i < arguments.length; i++) {
+        //$("#"+string1).mouseover(function () {
+        $("#" + arguments[i]).css("background-color", "lightgreen").css("color", "black").css("opacity", 1).css("font-weight", "bold");
+        //});
+    }*/
+
+    /*
+        $("#" + string1).css("font-weight", "bold").css("color","black");
+        $("#" + string1).css("background-color", "lightgreen");
+
+        $("#" + string2).css("background-color", "lightgreen");
+        $("#" + string2).css("color", "black").css("opacity", 1);
+        $("#" + string2).css("border-width","thick");
+        $("#" + string2).css("font-weight", "bold");
+
+        $("#" + string3).css("background-color", "lightgreen");
+        $("#" + string3).css("color", "black").css("opacity", 1);
+        $("#" + string3).css("font-weight", "bold");
+
+        $("#" + string4).css("background-color", "lightgreen");
+        $("#" + string4).css("color", "black").css("opacity", 1);
+        $("#" + string4).css("font-weight", "bold");
+
+        $("#" + string5).css("background-color", "lightgreen");
+        $("#" + string5).css("color", "black").css("opacity", 1);
+        $("#" + string5).css("font-weight", "bold");
+
+        $("#" + string6).css("background-color", "lightgreen");
+        $("#" + string6).css("color", "black").css("opacity", 1);
+        $("#" + string6).css("font-weight", "bold");
+
+        $("#" + string7).css("background-color", "lightgreen");
+        $("#" + string7).css("color", "black").css("opacity", 1);
+        $("#" + string7).css("font-weight", "bold");
+       //*/
+
+}
+
+function HighlightOff() {
+    /*
+    for (var i = 0; i < arguments.length; i++) {
+        $("#" + arguments[i]).css("background-color", "teal");
+        $("#" + arguments[i]).css("color", "white").css("opacity", 1);
+        $("#" + arguments[i]).css("font-weight", "normal");
+    }*/
+
+    $("#" + string1).css("background-color", "pink").css("color", "white").css("opacity", 1).css("font-weight", "normal");  
 
 }
