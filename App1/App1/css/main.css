@@ -5,9 +5,9 @@
 }
 
 .btn-group .button {
-    border-radius:13px; 
-  background-color: green; 
-  border: 3px solid black;
+  border-radius:13px; 
+  border:0px;
+  background-color: teal; 
   color: white;
   text-align: center;
   text-decoration: none;
@@ -35,7 +35,6 @@ color: white;
 font-weight: bold;
 opacity: 1;
 color: white;
-background-color: #5DADE2; 
 }
 
 .btn-group .layer1a {
@@ -75,7 +74,7 @@ left: 600px;
 
 
 .btn-group .button:hover {
-  background-color: #3e8e41;
+
   opacity: 0.9; 
 }
 
