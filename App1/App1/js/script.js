@@ -18,48 +18,301 @@
     //*/
 
 
+
+    $("#MC")
+
+        .mouseover(function(){
+        BaseON(this);
+         PreReqsON("PR2");
+         PreLinksON("PR2_MC");
+         })
+        .mouseout(function(){
+         BaseOFF(this); 
+         PrereqsOFF("PR2");
+         PreLinksOFF("PR2_MC");     
+
+    });
+
+
     $("#OS")
 
         .mouseover(function(){
-        $(this).css("background-color","deepSkyBlue").css("font-weight","bold").css(
-            "color","white");
+        BaseON(this);
          PreReqsON("CA","AS","DSA");
          PreLinksON("DSA_OS","CA_OS","AS_OS");
+             PrePreReqsON("PR2");
+             PrePreLinksON("PR2_DSA","PR2_CA","PR2_AS");
          })
         .mouseout(function(){
-         $(this).css("background-color","teal");
+         BaseOFF(this); 
          PostReqsOFF("CA","AS","DSA");
-         PostLinksOFF("DSA_OS","CA_OS","AS_OS");       
+         PreLinksOFF("DSA_OS","CA_OS","AS_OS"); 
+             PrePreReqsOFF("PR2");
+             PrePreLinksOFF("PR2_DSA","PR2_CA","PR2_AS");      
 
     });
 
 
 
+    $("#OOP")
 
-/*
-    $("#OS").hover(
-        function(){PreReqsON("CA","AS","DSA");PreLinksON("DSA_OS","CA_OS","AS_OS")},
-        function(){PrereqsOFF("CA","AS","DSA");PreLinksOFF("DSA_OS","CA_OS","AS_OS")}
-        );
+        .mouseover(function(){
+        BaseON(this);
+         PreReqsON("PR2");
+         PostReqsON("CC","CRY","SE","BD","DBM");
+         PreLinksON("PR2_OOP");
+         PostLinksON("OOP_CC","OOP_CRY","OOP_SE","OOP_BD","OOP_DBM")
+         })
+        .mouseout(function(){
+         BaseOFF(this); 
+         PrereqsOFF("PR2");
+         PostReqsOFF("CC","CRY","SE","BD","DBM");
+         PreLinksOFF("PR2_OOP");  
+         PostLinksOFF("OOP_CC","OOP_CRY","OOP_SE","OOP_BD","OOP_DBM"); 
+
+    });
 
 
-    $("#DSA").hover(
-        function(){PreReqsON("PR2");PostReqsON("CDS","PL","AI");PreLinksON("PR2_DSA");PostLinksON("SDA_AD","DSA_TOC","DSA_CDS","DSA_PL","DSA_AI");},
-        function(){PrereqsOFF("PR2");PostReqsOFF("CDS","PL","AI");PreLinksOFF("PR2_DSA");PostLinksOFF("SDA_AD","DSA_TOC","DSA_CDS","DSA_PL","DSA_AI");}
-        );
+    $("#CC")
+
+        .mouseover(function(){
+        BaseON(this);
+         PreReqsON("OOP");
+         PreLinksON("OOP_CC");
+             PrePreReqsON("PR2");
+             PrePreLinksON("PR2_OOP");
+         })
+        .mouseout(function(){
+         BaseOFF(this); 
+         PostReqsOFF("OOP");
+         PreLinksOFF("OOP_CC"); 
+             PrePreReqsOFF("PR2");
+             PrePreLinksOFF("PR2_OOP");      
+
+    });
+
+    $("#CRY")
+
+        .mouseover(function(){
+        BaseON(this);
+         PreReqsON("OOP");
+         PreLinksON("OOP_CRY");
+             PrePreReqsON("PR2");
+             PrePreLinksON("PR2_OOP");
+         })
+        .mouseout(function(){
+         BaseOFF(this); 
+         PostReqsOFF("OOP");
+         PreLinksOFF("OOP_CRY"); 
+             PrePreReqsOFF("PR2");
+             PrePreLinksOFF("PR2_OOP");      
+
+    });
+
+    $("#SE")
+
+        .mouseover(function(){
+        BaseON(this);
+         PreReqsON("OOP");
+         PreLinksON("OOP_SE");
+             PrePreReqsON("PR2");
+             PrePreLinksON("PR2_OOP");
+         })
+        .mouseout(function(){
+         BaseOFF(this); 
+         PostReqsOFF("OOP");
+         PreLinksOFF("OOP_SE"); 
+             PrePreReqsOFF("PR2");
+             PrePreLinksOFF("PR2_OOP");      
+
+    });
+
+    $("#BD")
+
+        .mouseover(function(){
+        BaseON(this);
+         PreReqsON("OOP");
+         PreLinksON("OOP_BD");
+             PrePreReqsON("PR2");
+             PrePreLinksON("PR2_OOP");
+         })
+        .mouseout(function(){
+         BaseOFF(this); 
+         PostReqsOFF("OOP");
+         PreLinksOFF("OOP_BD"); 
+             PrePreReqsOFF("PR2");
+             PrePreLinksOFF("PR2_OOP");      
+
+    });
+
+    $("#DBM")
+
+        .mouseover(function(){
+        BaseON(this);
+         PreReqsON("OOP");
+         PreLinksON("OOP_DBM");
+             PrePreReqsON("PR2");
+             PrePreLinksON("PR2_OOP");
+         })
+        .mouseout(function(){
+         BaseOFF(this); 
+         PostReqsOFF("OOP");
+         PreLinksOFF("OOP_DBM"); 
+             PrePreReqsOFF("PR2");
+             PrePreLinksOFF("PR2_OOP");      
+
+    });
 
 
-*/
+    $("#DSA")
+
+        .mouseover(function(){
+        BaseON(this);
+         PreReqsON("PR2");
+         PostReqsON("AD","TOC","CDS","PL","AI");
+         PreLinksON("PR2_DSA");
+         PostLinksON("DSA_AD","DSA_TOC","DSA_CDS","DSA_PL","DSA_AI")
+         })
+        .mouseout(function(){
+         BaseOFF(this); 
+         PrereqsOFF("PR2");
+         PostReqsOFF("AD","TOC","CDS","PL","AI");
+         PreLinksOFF("PR2_DSA");  
+         PostLinksOFF("DSA_AD","DSA_TOC","DSA_CDS","DSA_PL","DSA_AI"); 
+
+    });
+
+    $("#AD")
+
+        .mouseover(function(){
+        BaseON(this);
+         PreReqsON("DSA");
+         PreLinksON("DM_DSA_AD");
+             PrePreReqsON("PR2");
+             PrePreLinksON("PR2_DSA");
+         })
+        .mouseout(function(){
+         BaseOFF(this); 
+         PostReqsOFF("DSA");
+         PreLinksOFF("DM_DSA_AD"); 
+             PrePreReqsOFF("PR2");
+             PrePreLinksOFF("PR2_DSA");      
+
+    });
+
+
+    $("#TOC")
+
+        .mouseover(function(){
+        BaseON(this);
+         PreReqsON("DSA");
+         PreLinksON("DM_DSA_TOC");
+             PrePreReqsON("PR2");
+             PrePreLinksON("PR2_DSA");
+         })
+        .mouseout(function(){
+         BaseOFF(this); 
+         PostReqsOFF("DSA");
+         PreLinksOFF("DM_DSA_TOC"); 
+             PrePreReqsOFF("PR2");
+             PrePreLinksOFF("PR2_DSA");      
+
+    });
+
+
+    $("#CDS")
+
+        .mouseover(function(){
+        BaseON(this);
+         PreReqsON("DSA");
+         PreLinksON("DSA_CDS");
+             PrePreReqsON("PR2");
+             PrePreLinksON("PR2_DSA");
+         })
+        .mouseout(function(){
+         BaseOFF(this); 
+         PostReqsOFF("DSA");
+         PreLinksOFF("DSA_CDS"); 
+             PrePreReqsOFF("PR2");
+             PrePreLinksOFF("PR2_DSA");      
+
+    });
+
+    $("#PL")
+
+        .mouseover(function(){
+        BaseON(this);
+         PreReqsON("DSA");
+         PreLinksON("DSA_PL");
+             PrePreReqsON("PR2");
+             PrePreLinksON("PR2_DSA");
+         })
+        .mouseout(function(){
+         BaseOFF(this); 
+         PostReqsOFF("DSA");
+         PreLinksOFF("DSA_PL"); 
+             PrePreReqsOFF("PR2");
+             PrePreLinksOFF("PR2_DSA");      
+
+    });
+
+    $("#AI")
+
+        .mouseover(function(){
+        BaseON(this);
+         PreReqsON("DSA");
+         PreLinksON("DSA_AI");
+             PrePreReqsON("PR2");
+             PrePreLinksON("PR2_DSA");
+         })
+        .mouseout(function(){
+         BaseOFF(this); 
+         PostReqsOFF("DSA");
+         PreLinksOFF("DSA_AI"); 
+             PrePreReqsOFF("PR2");
+             PrePreLinksOFF("PR2_DSA");      
+
+    });
+
 
 });
 
 // ------------ BUTTON FUNCTIONS
 
+function BaseON(){
+   $(arguments).css("font-weight","bold").css("color","black").css("background-color","orangered");
+}
+
 function PreReqsON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("font-weight", "bold").css("color","black").css("background-color", "aquamarine");
+        $("#" + arguments[i]).css("font-weight", "bold").css("color","black").css("background-color", "lime");
     }
 }
+
+function PrePreReqsON(){
+    for (var i = arguments.length - 1; i >= 0; i--) {
+        $("#" + arguments[i]).css("font-weight", "normal").css("color","black").css("background-color", "lime");
+    }
+}
+
+
+function PrePreReqsOFF(){
+    for (var i = arguments.length - 1; i >= 0; i--) {
+        $("#" + arguments[i]).css("font-weight", "normal").css("color","white").css("background-color", "teal");
+    }
+}
+
+function PostPostReqsOff(){
+    for (var i = arguments.length - 1; i >= 0; i--) {
+        $("#" + arguments[i]).css("font-weight", "normal").css("color","white").css("background-color", "teal");
+    }
+}
+
+
+function BaseOFF(){
+   $(arguments).css("font-weight","normal").css("color","white").css("background-color","teal");
+}
+
 
 function PrereqsOFF(){
     for (var i = arguments.length - 1; i >= 0; i--) {
@@ -72,7 +325,7 @@ function PrereqsOFF(){
 
 function PostReqsON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("font-weight", "bold").css("color","black").css("background-color", "orange");
+        $("#" + arguments[i]).css("font-weight", "bold").css("color","black").css("background-color", "lime");
     }
 }
 
@@ -91,27 +344,39 @@ function PostReqsOFF(){
 
 function PreLinksON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("stroke", "black").css("opacity", "1").css("strokeWidth", "6");
+        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "6");
+    }
+}
+
+function PrePreLinksON(){
+    for (var i = arguments.length - 1; i >= 0; i--) {
+        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "4");
     }
 }
 
 
 function PreLinksOFF(){
    for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("stroke", "black").css("opacity", "1").css("strokeWidth", "3");
+        $("#" + arguments[i]).css("stroke", "purple").css("strokeWidth", "2");
+    }
+}
+
+function PrePreLinksOFF(){
+   for (var i = arguments.length - 1; i >= 0; i--) {
+        $("#" + arguments[i]).css("stroke", "purple").css("strokeWidth", "2");
     }
 }
 
 
 function PostLinksON(){
    for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("stroke", "black").css("opacity", "1").css("strokeWidth", "8");
+        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "7");
     }
 }
 
 function PostLinksOFF(){
    for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("stroke", "black").css("opacity", "1").css("strokeWidth", "3");
+        $("#" + arguments[i]).css("stroke", "purple").css("strokeWidth", "2");
     }
 }
 
@@ -196,7 +461,7 @@ function Hover_out(string1, string2, string3, string4, string5,string6, string7)
 function Hover_path(string1, string2, string3, string4, string5, string6, string7) {
     $("#" + string1).mouseover(function () {
         $("#" + string2).css("stroke", "black");
-        $("#" + string2).css("opacity", "1");
+        $("#" + string2);
         $("#" + string2).css("strokeWidth", "8");
         $("#" + string3).css("stroke", "black");
         $("#" + string3).css("opacity", "1");

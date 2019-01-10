@@ -31,7 +31,11 @@ font-weight: normal;
 color: white;
 }
 
-
+.btn-group .layer1 .clicked {
+font-weight: bold;
+opacity: 1;
+color: white;
+}
 
 .btn-group .layer1a {
 position: absolute;
