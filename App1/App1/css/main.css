@@ -1,7 +1,6 @@
 
 .button {
 
-
 }
 
 .btn-group .button {
@@ -27,15 +26,8 @@
 position: absolute;
 top: 526px;
 left: 300px; 
-font-weight: normal;
-color: white;
 }
 
-.btn-group .layer1 .clicked {
-font-weight: bold;
-opacity: 1;
-color: white;
-}
 
 .btn-group .layer1a {
 position: absolute;
@@ -48,7 +40,6 @@ left: 600px;
 position: absolute;
 top: 351px;
 left: 600px; 
-color: red;
 }
 
 .btn-group .layer3 {
@@ -73,16 +64,3 @@ left: 600px;
 }
 
 
-.btn-group .button:hover {
-
-  opacity: 0.9; 
-}
-
-
-.hoverd{
-  opacity: 1; 
-}
-
-.hoverd:hover{
-  opacity: 1; 
-}
