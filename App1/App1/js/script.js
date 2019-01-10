@@ -18,12 +18,25 @@
     //*/
 
 
-    $("#OOP").mouseover(function(){
-        $(this).css("background-color","blue");
+    $("#OS")
+
+        .mouseover(function(){
+        $(this).css("background-color","deepSkyBlue").css("font-weight","bold").css(
+            "color","white");
+         PreReqsON("CA","AS","DSA");
+         PreLinksON("DSA_OS","CA_OS","AS_OS");
+         })
+        .mouseout(function(){
+         $(this).css("background-color","teal");
+         PostReqsOFF("CA","AS","DSA");
+         PostLinksOFF("DSA_OS","CA_OS","AS_OS");       
 
     });
 
 
+
+
+/*
     $("#OS").hover(
         function(){PreReqsON("CA","AS","DSA");PreLinksON("DSA_OS","CA_OS","AS_OS")},
         function(){PrereqsOFF("CA","AS","DSA");PreLinksOFF("DSA_OS","CA_OS","AS_OS")}
@@ -36,7 +49,7 @@
         );
 
 
-
+*/
 
 });
 
@@ -44,7 +57,7 @@
 
 function PreReqsON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("font-weight", "bold").css("color","black").css("background-color", "lightgreen");
+        $("#" + arguments[i]).css("font-weight", "bold").css("color","black").css("background-color", "aquamarine");
     }
 }
 
