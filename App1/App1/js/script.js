@@ -1,5 +1,22 @@
 ﻿$(document).ready(function () {
 
+    $("#PR2")
+
+        .mouseover(function(){
+        BaseON(this);
+         PostReqsON("DSA","CA", "AS","MC","OOP");
+         PostPostReqsON("CDS ", "PL", "AI", "OS", "CC", "CRY", "SE", "BD", "DBM");
+         PostLinksON("PR2_DSA","PR2_CA","PR2_AS","PR2_MC","PR2_OOP", "DSA_CDS", "DSA_PL", "DSA_AI", "OOP_CC", "OOP_CRY", "OOP_SE", "OOP_BD", "OOP_DBM");
+         })
+        .mouseout(function(){
+         BaseOFF(this); 
+         PostReqsOFF("DSA","CA", "AS","MC","OOP","CDS", "PL", "AI", "OS", "CC", "CRY", "SE", "BD", "DBM");
+         PostLinksOFF("PR2_DSA","PR2_CA","PR2_AS","PR2_MC","PR2_OOP", "DSA_CDS", "DSA_PL", "DSA_AI", "OOP_CC", "OOP_CRY", "OOP_SE", "OOP_BD", "OOP_DBM");     
+
+    });
+     
+
+
 
     $("#MC")
 
@@ -50,15 +67,71 @@
     });
 
 
-    $("#DM").mouseover(function(){
-      $("#AD").css({"border-top":"30px solid RED"});
-      $("#TOC").css({"border-top":"30px solid RED"});
+
+
+
+$("#DM").mouseover(function(){
+      $("#AD").css("background-image","linear-gradient(0deg,  teal 50%, hotpink 50%)");
+      $("#TOC").css("background-image","linear-gradient(0deg,  teal 50%, hotpink 50%)");
   });
 
-        $("#DSA").mouseover(function(){
-      $("#TOC").css({"border-bottom":"30px solid RED"});
-       $("#AD").css({"border-bottom":"30px solid RED"});
+        $("#DM").mouseout(function(){
+      $("#AD").css("background", "teal");
+      $("#TOC").css("background", "teal");
   });
+
+ $("#DM").click(function(){
+
+
+    $("#AD").animate({width: '300px'});
+
+
+
+$("#PR2_DSA").effect('slide', { direction: 'right', mode: 'show' }, 500);
+
+  });  
+
+//.effect('slide', { direction: 'right', mode: 'show' }, 500);
+
+
+$("#DSA").mouseover(function(){
+      $("#AD").css("background-image","linear-gradient(0deg,  hotpink 50%, teal 50%)").css("font-weight","bold").css("color","black");
+      $("#TOC").css("background-image","linear-gradient(0deg,  hotpink 50%, teal 50%)");
+      $("#OS").css("background-image","linear-gradient(0deg,  teal 50%, hotpink 50%)");
+
+  });
+
+        $("#DSA").mouseout(function(){
+      $("#AD").css("background", "teal").css("");
+      $("#TOC").css("background", "teal");
+      $("#OS").css("background", "teal");
+  });
+
+
+
+$("#CA").mouseover(function(){
+      $("#OS").css("background-image","linear-gradient(0deg,  teal 50%, hotpink 50%)").css("color","black");
+  });
+
+        $("#CA").mouseout(function(){
+      $("#OS").css("background", "teal");
+  });
+
+
+
+$("#DSA").mouseover(function(){
+      $("#AD").css("background-image","linear-gradient(0deg,  hotpink 50%, teal 50%)");
+      $("#TOC").css("background-image","linear-gradient(0deg,  hotpink 50%, teal 50%)");
+  });
+
+        $("#DSA").mouseout(function(){
+      $("#AD").css("background", "teal");
+      $("#TOC").css("background", "teal");
+  });
+
+
+
+
 
 
     $("#OOP")
@@ -176,14 +249,14 @@
         .mouseover(function(){
         BaseON(this);
          PreReqsON("PR2");
-         PostReqsON("AD","TOC","CDS","PL","AI");
+         PostReqsON("CDS","PL","AI");
          PreLinksON("PR2_DSA");
          PostLinksON("DSA_AD","DSA_TOC","DSA_CDS","DSA_PL","DSA_AI")
          })
         .mouseout(function(){
          BaseOFF(this); 
          PreReqsOFF("PR2");
-         PostReqsOFF("AD","TOC","CDS","PL","AI");
+         PostReqsOFF("CDS","PL","AI");
          PreLinksOFF("PR2_DSA");  
          PostLinksOFF("DSA_AD","DSA_TOC","DSA_CDS","DSA_PL","DSA_AI"); 
 
@@ -291,13 +364,13 @@ function BaseON(){
 
 function PreReqsON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("border","5px solid black").css("font-weight", "bold").css("color","black").css("background-color", "lime");
+        $("#" + arguments[i]).css("border","5px solid black").css({"clip-path": "circle(100px at 35px 35px)"}).css("font-weight", "bold").css("color","black").css("background-color", "lawngreen");
     }
 }
 
 function PrePreReqsON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("border","5px solid black").css("font-weight", "bold").css("color","black").css("background-color", "lime");
+        $("#" + arguments[i]).css("border","5px solid black").css("font-weight", "bold").css("color","black").css("background-color", "lightgreen");
     }
 }
 
@@ -311,6 +384,12 @@ function PrePreReqsOFF(){
 function PostPostReqsOff(){
     for (var i = arguments.length - 1; i >= 0; i--) {
         $("#" + arguments[i]).css("font-weight", "normal").css("color","white").css("background-color", "teal");
+    }
+}
+
+function PostPostReqsON(){
+    for (var i = arguments.length - 1; i >= 0; i--) {
+        $("#" + arguments[i]).css("border","5px solid black").css("font-weight", "bold").css("color","black").css("background-color", "pink");
     }
 }
 
@@ -330,13 +409,13 @@ function PreReqsOFF(){
 
 function PostReqsON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("font-weight", "bold").css("color","black").css("background-color", "lime");
+        $("#" + arguments[i]).css("border","5px solid black").css("font-weight", "bold").css("color","black").css("background-color", "hotpink");
     }
 }
 
 function PostReqsOFF(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("font-weight", "normal").css("color","white").css("background-color", "teal");
+        $("#" + arguments[i]).css("border","0px solid black").css("font-weight", "normal").css("color","white").css("background-color", "teal");
     }
 }
 
