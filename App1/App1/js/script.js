@@ -454,8 +454,9 @@ function PrePreLinksOFF(){
 
 function PostLinksON(){
    for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "7");
+       $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "7");
     }
+
 }
 
 function PostLinksOFF(){
