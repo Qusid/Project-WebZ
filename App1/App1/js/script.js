@@ -71,23 +71,27 @@ $("#DM").mouseover(function(){
 
 
 $("#DSA").mouseover(function(){
-      $("#AD").css("background-image","linear-gradient(90deg,  orangered 10%, teal 10%)").css("font-weight","bold").css("color","black");
-      $("#TOC").css("background-image","linear-gradient(90deg,  orangered 10%, teal 10%)").css("font-weight","bold").css("color","black");
-      $("#OS").css("background-image","linear-gradient(90deg,  orangered 10%, teal 10%)").css("font-weight","bold").css("color","black");
-
-
+      $("#AD").css("background-image","linear-gradient(90deg,  cyan 10%, teal 10%)").css("font-weight","bold").css("color","white");
+      $("#TOC").css("background-image","linear-gradient(90deg,  cyan 10%, teal 10%)").css("font-weight","bold").css("color","white");
+      $("#OS").css("background-image","linear-gradient(90deg,  tomato 10%, teal 10%)").css("font-weight","bold").css("color","white");
+      $("#DM").css("background-image","linear-gradient(90deg,  teal 90%, cyan 90%)").css("font-weight","bold").css("color","white");
+      $("#CA").css("background-image","linear-gradient(90deg,  teal 90%, tomato 90%)").css("font-weight","bold").css("color","white");
+      $("#AS").css("background-image","linear-gradient(90deg,  teal 90%, tomato 90%)").css("font-weight","bold").css("color","white");
   });
 
         $("#DSA").mouseout(function(){
       $("#AD").css("background", "teal").css("font-weight","normal").css("color","white");
       $("#TOC").css("background", "teal").css("font-weight","normal").css("color","white");
       $("#OS").css("background", "teal").css("font-weight","normal").css("color","white");
+      $("#DM").css("background", "teal").css("font-weight","normal").css("color","white");
+      $("#CA").css("background", "teal").css("font-weight","normal").css("color","white");
+      $("#AS").css("background", "teal").css("font-weight","normal").css("color","white");
   });
 
 
 
 $("#CA").mouseover(function(){
-      $("#OS").css("background-image","linear-gradient(90deg,  orangered 10%, teal 10%)").css("font-weight","bold").css("color","black");
+      $("#OS").css("background-image","linear-gradient(90deg,  cyan 10%, teal 10%)").css("font-weight","bold").css("color","black");
   });
 
         $("#CA").mouseout(function(){
@@ -95,7 +99,7 @@ $("#CA").mouseover(function(){
   });
 
 $("#AS").mouseover(function(){
-      $("#OS").css("background-image","linear-gradient(90deg,  orangered 10%, teal 10%)").css("font-weight","bold").css("color","black");
+      $("#OS").css("background-image","linear-gradient(90deg,  cyan 10%, teal 10%)").css("font-weight","bold").css("color","black");
   });
 
         $("#AS").mouseout(function(){
@@ -380,7 +384,7 @@ $("#AS").mouseover(function(){
 // ------------ BUTTON FUNCTIONS
 
 function BaseON(){
-   $(arguments).css({"border":"5px solid black","font-weight":"bold","color":"black","background-color":"orangered"});}
+   $(arguments).css({"border":"5px solid black","font-weight":"bold","color":"black","background-color":"CYAN"});}
 
 function PreReqsON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
@@ -409,7 +413,7 @@ function PostPostReqsOff(){
 
 function PostPostReqsON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("font-weight", "bold").css("color","black").css("background-color", "pink");
+        $("#" + arguments[i]).css("font-weight", "bold").css("color","white").css("background-color", "darkblue");
     }
 }
 
@@ -429,7 +433,7 @@ function PreReqsOFF(){
 
 function PostReqsON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("font-weight", "bold").css("color","black").css("background-color", "orangered");
+        $("#" + arguments[i]).css("font-weight", "bold").css("color","white").css("background-color", "dodgerblue");
     }
 }
 
