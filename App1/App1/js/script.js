@@ -71,10 +71,10 @@ $("#DM").mouseover(function(){
 
 
 $("#DSA").mouseover(function(){
-      $("#AD").css("background-image","linear-gradient(90deg,  cyan 10%, teal 10%)").css("font-weight","bold").css("color","white");
-      $("#TOC").css("background-image","linear-gradient(90deg,  cyan 10%, teal 10%)").css("font-weight","bold").css("color","white");
+      $("#AD").css("background-image","linear-gradient(90deg,  purple 10%, teal 10%)").css("font-weight","bold").css("color","white");
+      $("#TOC").css("background-image","linear-gradient(90deg,  purple 10%, teal 10%)").css("font-weight","bold").css("color","white");
       $("#OS").css("background-image","linear-gradient(90deg,  tomato 10%, teal 10%)").css("font-weight","bold").css("color","white");
-      $("#DM").css("background-image","linear-gradient(90deg,  teal 90%, cyan 90%)").css("font-weight","bold").css("color","white");
+      $("#DM").css("background-image","linear-gradient(90deg,  teal 90%, purple 90%)").css("font-weight","bold").css("color","white");
       $("#CA").css("background-image","linear-gradient(90deg,  teal 90%, tomato 90%)").css("font-weight","bold").css("color","white");
       $("#AS").css("background-image","linear-gradient(90deg,  teal 90%, tomato 90%)").css("font-weight","bold").css("color","white");
   });
