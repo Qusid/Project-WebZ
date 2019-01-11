@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+
+    <h2>CS FLOW</h2>
+
+    <div class="btn-group">
+        <div class="layer1a">
+            <button id="DM" class="button" >Discrete Math</button>
+        </div>
+    </div>
+
+    <div class="btn-group">
+        <div class="layer1">
+            <button id="PR2" class="button">Programming II</button>
+        </div>
+    </div>
+
+    <div class="btn-group">
+        <div id="syc" class="layer2">
+            <button id="DSA" class="button">Data Structures and Algorithms</button>
+        </div>
+    </div>
+
+    <div class="btn-group">
+        <div class="layer3">
+            <button id="OOP" class="button">Object Oriented Programming</button>
+        </div>
+    </div>
+
+    <div class="btn-group">
+        <div class="layer4">
+            <button id="AD" class="button">Algorithm Design</button>
+            <button id="TOC" class="button">Theory of Counting</button>
+            <button id="CDS" class="button">Clinical Decision Support</button>
+            <button id="PL" class="button">Programming Languages</button>
+            <button id="AI" class="button">Topics in AI</button>
+            <button id="OS" class="button">Operating System</button>
+            <button id="CC" class="button">Cloud Computing</button>
+            <button id="CRY" class="button">Cryptography and Security</button>
+            <button id="SE" class="button">Software Engineering</button>
+            <button id="BD" class="button">Big Data</button>
+            <button id="DBM" class="button">Database Management</button>
+
+        </div>
+    </div>
+
+    <div class="btn-group">
+        <div class="layer5">
+            <button id="CA" class="button">Computer Architecture</button>
+            <button id="AS" class="button">Assembly</button>
+            <button id="MC" class="button">Mobile Computing</button>
+        </div>
+    </div>
+
+
+
+    <svg height="1000" width="1000">
+        <path class="buttonHover" id="PR2_DSA" d="M 475 489 l 38 0 a20,20 1 0 0 20,-20 l 0 -136 a20,20 0 0 1 20, -20 l 35 0" />
+
+
+
+        <path class="buttonHover" id="PR2_OOP" d="M 475 489 l 38 0 a20,20 0 0 1 20,20 l 0 200 a20,20 1 0 0 20, 20 l 35 0"/>
+
+        <path class="buttonHover" id="PR2_CA" d="M 475 489 l 111 0"/>
+
+        <path class="buttonHover" id="PR2_AS" d="M 475 489 l 38 0 a20,20 0 0 1 20,20 l 0 32 a20,20 1 0 0 20, 20 l 35 0"/>
+
+        <path class="buttonHover" id="PR2_MC" d="M 475 489 l 38 0 a20,20 0 0 1 20,20 l 0 102 a20,20 1 0 0 20, 20 l 35 0"/>
+
+        <path class="buttonHover" id="CA_OS" d="M 776 490 l 21 0 a12,12 0 0 1 12,12 l 0 6 a12,12 1 0 0 12,12 l 68 0"/>
+
+        <path class="buttonHover" id="AS_OS" d="M 776 562 l 21 0 a12,12 1 0 0 12,-12 l 0 -18 a12,12 0 0 1 12,-12 l 68 0"/>
+
+        <path class="buttonHover" id="DSA_OS" d="M 776 312 l 21 0 a12,12 0 0 1 12,12 l 0 183 a12,12 1 0 0 12,12 l 68 0"/>
+
+        <path class="buttonHover" id="OOP_DBM" d="M 776 731 l 38 0 a20,20 0 0 1 20,20 l 0 97 a20,20 1 0 0 20, 20 l 35 0"/>
+
+        <path class="buttonHover" id="OOP_BD" d="M 776 731 l 38 0 a20,20 0 0 1 20,20 l 0 28 a20,20 1 0 0 20,20 l 35 0"/>
+
+        <path class="buttonHover" id="OOP_SE" d="M 776 731 l 112 0"/>
+
+        <path class="buttonHover" id="OOP_CRY" d="M 776 731 l 38 0 a20,20 1 0 0 20,-20 l 0 -34 a20,20 0 0 1 20, -20 l 35 0"/>
+
+        <path class="buttonHover" id="OOP_CC" d="M 776 731 l 38 0 a20,20 1 0 0 20,-20 l 0 -103 a20,20 0 0 1 20, -20 l 35 0"/>
+
+
+        <path class="buttonHover" id="DSA_AI" d="M 776 312 l 21 0 a12,12 0 0 1 12,12 l 0 47 a12,12 1 0 0 12,12 l 18 0 a12,12 0 0 1 12,12 l 0 47 a12,12 1 0 0 12,12 l 27 0"/>
+
+        <path class="buttonHover" id="DSA_PL" d="M 776 312 l 21 0 a12,12 0 0 1 12,12 l 0 47 a12,12 1 0 0 12,12 l 66 0"/>
+
+        <path class="buttonHover" id="DSA_CDS" d="M 776 312 l 21 0 a12,12 0 0 1 12,12 l 0 47 a12,12 1 0 0 12,12 l 18 0 a12,12 1 0 0 12,-12 l 0 -47 a12,12 0 0 1 12,-12 l 27 0"/>
+
+        <path class="buttonHover" id="DM_DSA_AD" d="M 776 312 l 21 0 a12,12 1 0 0 12,-12 l 0 -82 a12,12 0 0 1 12,-12 l 17 0 a12,12 1 0 0 12,-12 l 0 -13 a12,12 0 0 1 12,-12 l 27 0"/>
+
+        <path class="buttonHover" id="DM_DSA_TOC" d="M 776 86 l 21 0 a12,12 0 0 1 12,12 l 0 96 a12,12 1 0 0  12,12 l 17 0a12,12 0 0 1 12,12 l 0 12 a12,12 1 0 0 12,12 l 27 0"/>
+
+
+</svg>
+</body>
+</html>
