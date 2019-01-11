@@ -461,13 +461,13 @@ function PrePreLinksON(){
 
 function PreLinksOFF(){
    for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("stroke", "purple").css("strokeWidth", "2");
+        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "2");
     }
 }
 
 function PrePreLinksOFF(){
    for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("stroke", "purple").css("strokeWidth", "2");
+        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "2");
     }
 }
 
@@ -481,6 +481,6 @@ function PostLinksON(){
 
 function PostLinksOFF() {
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("stroke", "purple").css("strokeWidth", "2");
+        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "2");
     }
 }
