@@ -59,8 +59,8 @@
 
 
 $("#DM").mouseover(function(){
-      $("#AD").css("background-image","linear-gradient(90deg,  orangered 10%, teal 10%)").css("font-weight","bold").css("color","black");
-      $("#TOC").css("background-image","linear-gradient(90deg,  orangered 10%, teal 10%)").css("font-weight","bold").css("color","black");
+      $("#AD").css("background-image","linear-gradient(90deg,  cyan 10%, teal 10%)").css("font-weight","bold").css("color","black");
+      $("#TOC").css("background-image","linear-gradient(90deg,  cyan 10%, teal 10%)").css("font-weight","bold").css("color","black");
   });
 
         $("#DM").mouseout(function(){
