@@ -364,7 +364,7 @@ function BaseON(){
 
 function PreReqsON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("border","5px solid black").css({"clip-path": "circle(100px at 35px 35px)"}).css("font-weight", "bold").css("color","black").css("background-color", "lawngreen");
+        $("#" + arguments[i]).css("border","5px solid black").css("font-weight", "bold").css("color","black").css("background-color", "lawngreen");
     }
 }
 
@@ -428,13 +428,13 @@ function PostReqsOFF(){
 
 function PreLinksON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "6");
+        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "6").css("stroke-dasharray","1000").css("stroke-dashoffset","1000").css("animation","dash 4s linear forwards");
     }
 }
 
 function PrePreLinksON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "4");
+        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "4").css("stroke-dasharray","1000").css("stroke-dashoffset","1000").css("animation","dash 2s linear forwards");
     }
 }
 
@@ -459,9 +459,8 @@ function PostLinksON(){
 
 }
 
-function PostLinksOFF(){
-   for (var i = arguments.length - 1; i >= 0; i--) {
+function PostLinksOFF() {
+    for (var i = arguments.length - 1; i >= 0; i--) {
         $("#" + arguments[i]).css("stroke", "purple").css("strokeWidth", "2");
     }
 }
-
