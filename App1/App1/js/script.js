@@ -32,19 +32,7 @@
 
     });
 
-    $("#DM")
 
-        .mouseover(function(){
-        BaseON(this);
-         PostReqsON("AD","TOC");
-         PostLinksON("DM_DSA_AD","DM_DSA_TOC");
-         })
-        .mouseout(function(){
-         BaseOFF(this); 
-         PreReqsOFF("AD","TOC");
-         PreLinksOFF("DM_DSA_AD","DM_DSA_TOC");     
-
-    });
 
 
 
@@ -71,38 +59,26 @@
 
 
 $("#DM").mouseover(function(){
-      $("#AD").css("background-image","linear-gradient(0deg,  teal 50%, hotpink 50%)");
-      $("#TOC").css("background-image","linear-gradient(0deg,  teal 50%, hotpink 50%)");
+      $("#AD").css("background-image","linear-gradient(90deg,  hotpink 10%, teal 10%)").css("font-weight","bold").css("color","black");
+      $("#TOC").css("background-image","linear-gradient(90deg,  hotpink 10%, teal 10%)").css("font-weight","bold").css("color","black");
   });
 
         $("#DM").mouseout(function(){
-      $("#AD").css("background", "teal");
-      $("#TOC").css("background", "teal");
+      $("#AD").css("background", "teal").css("font-weight","normal").css("color","white");
+      $("#TOC").css("background", "teal").css("font-weight","normal").css("color","white");
   });
 
- $("#DM").click(function(){
-
-
-    $("#AD").animate({width: '300px'});
-
-
-
-$("#PR2_DSA").effect('slide', { direction: 'right', mode: 'show' }, 500);
-
-  });  
-
-//.effect('slide', { direction: 'right', mode: 'show' }, 500);
 
 
 $("#DSA").mouseover(function(){
-      $("#AD").css("background-image","linear-gradient(0deg,  hotpink 50%, teal 50%)").css("font-weight","bold").css("color","black");
-      $("#TOC").css("background-image","linear-gradient(0deg,  hotpink 50%, teal 50%)");
+      $("#AD").css("background-image","linear-gradient(90deg,  hotpink 50%, teal 50%)").css("font-weight","bold").css("color","black");
+      $("#TOC").css("background-image","linear-gradient(90deg,  hotpink 50%, teal 50%)");
       $("#OS").css("background-image","linear-gradient(90deg,  hotpink 10%, teal 10%)");
 
   });
 
         $("#DSA").mouseout(function(){
-      $("#AD").css("background", "teal").css("");
+      $("#AD").css("background", "teal").css("font-weight","normal").css("color","white");
       $("#TOC").css("background", "teal");
       $("#OS").css("background", "teal");
   });
