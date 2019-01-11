@@ -390,7 +390,7 @@ function PreReqsON(){
 
 function PrePreReqsON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("font-weight", "bold").css("color","black").css("background-color", "lightgreen");
+        $("#" + arguments[i]).css("color","black").css("background-color", "lightgreen");
     }
 }
 
@@ -409,7 +409,7 @@ function PostPostReqsOff(){
 
 function PostPostReqsON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("border","5px solid black").css("font-weight", "bold").css("color","black").css("background-color", "pink");
+        $("#" + arguments[i]).css("font-weight", "bold").css("color","black").css("background-color", "pink");
     }
 }
 
