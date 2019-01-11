@@ -287,14 +287,14 @@ $("#AS").mouseover(function(){
         .mouseover(function(){
         BaseON(this);
          PreReqsON("DSA","DM");
-         PreLinksON("DM_DSA_AD");
+            PreLinksON("DM_DSA_AD", "DM_DSA_TOC");
              PrePreReqsON("PR2");
              PrePreLinksON("PR2_DSA");
          })
         .mouseout(function(){
          BaseOFF(this); 
          PreReqsOFF("DSA","DM");
-         PreLinksOFF("DM_DSA_AD"); 
+            PreLinksOFF("DM_DSA_AD", "DM_DSA_TOC"); 
              PrePreReqsOFF("PR2");
              PrePreLinksOFF("PR2_DSA");      
 
@@ -306,14 +306,14 @@ $("#AS").mouseover(function(){
         .mouseover(function(){
         BaseON(this);
          PreReqsON("DSA","DM");
-         PreLinksON("DM_DSA_TOC");
+            PreLinksON("DM_DSA_TOC", "DM_DSA_AD");
              PrePreReqsON("PR2");
              PrePreLinksON("PR2_DSA");
          })
         .mouseout(function(){
          BaseOFF(this); 
          PreReqsOFF("DSA","DM");
-         PreLinksOFF("DM_DSA_TOC"); 
+            PreLinksOFF("DM_DSA_TOC", "DM_DSA_AD"); 
              PrePreReqsOFF("PR2");
              PrePreLinksOFF("PR2_DSA");      
 
