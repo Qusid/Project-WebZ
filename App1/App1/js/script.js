@@ -380,7 +380,7 @@ $("#AS").mouseover(function(){
 // ------------ BUTTON FUNCTIONS
 
 function BaseON(){
-   $(arguments).css({"border":"5px solid black","font-weight":"bold","color":"black","background-color":"orangered"});}
+   $(arguments).css({"font-weight":"bold","color":"black","background-color":"orangered"});}
 
 function PreReqsON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
