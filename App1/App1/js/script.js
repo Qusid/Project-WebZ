@@ -16,19 +16,58 @@
     });
      
 
+    //*
+    $("#PR2")
 
+        .mouseover(function(){
+        BaseON(this);
+         PreReqsON();
+         PreLinksON();
+         PostReqsON("DSA","CA","AS","MC","OOP");
+         PreLinksON("PR2_DSA","PR2_CA","PR2_AS","PR2_MC","PR2_OOP");
+         })
+        .mouseout(function(){
+         BaseOFF(this); 
+         PrereqsOFF();
+         PreLinksOFF();
+         PostReqsOFF("DSA","CA","AS","MC","OOP");
+         PreLinksOFF("PR2_DSA","PR2_CA","PR2_AS","PR2_MC","PR2_OOP"); 
 
-    $("#MC")
+    });
+
+    $("#DM")
+
+        .mouseover(function(){
+        BaseON(this);
+         PreReqsON();
+         PreLinksON();
+         PostReqsON("AD","TOC");
+         PostLinksON("DM_DSA_AD","DM_DSA_TOC");
+         })
+        .mouseout(function(){
+         BaseOFF(this); 
+         PrereqsOFF();
+         PreLinksOFF();
+         PostReqsOFF("AD","TOC");
+         PostLinksOFF("DM_DSA_AD","DM_DSA_TOC"); 
+
+    });
+
+    $("#DM")
 
         .mouseover(function(){
         BaseON(this);
          PreReqsON("PR2");
-         PreLinksON("PR2_MC");
+         PostReqsON();
+         PreLinksON("PR2_DSA");
+         PostLinksON()
          })
         .mouseout(function(){
          BaseOFF(this); 
-         PreReqsOFF("PR2");
-         PreLinksOFF("PR2_MC");     
+         PrereqsOFF("PR2");
+         PostReqsOFF("AD","TOC","CDS","PL","AI");
+         PreLinksOFF("PR2_DSA");  
+         PostLinksOFF("DSA_AD","DSA_TOC","DSA_CDS","DSA_PL","DSA_AI"); 
 
     });
 
@@ -48,14 +87,32 @@
 
 
 
-    $("#OS")
+    $("#CA")
 
         .mouseover(function(){
         BaseON(this);
-         PreReqsON("CA","AS","DSA");
-         PreLinksON("DSA_OS","CA_OS","AS_OS");
-             PrePreReqsON("PR2");
-             PrePreLinksON("PR2_DSA","PR2_CA","PR2_AS");
+        PreReqsON("PR2");
+        PostReqsON("OS");
+        PreLinksON("PR2_CA");
+        PostLinksON("CA_OS")
+        })
+        .mouseout(function(){
+        BaseOFF(this); 
+        PrereqsOFF("PR2");
+        PostReqsOFF("OS");
+        PreLinksOFF("PR2_CA");  
+        PostLinksOFF("CA_OS"); 
+
+    });
+
+    $("#AS")
+
+        .mouseover(function(){
+        BaseON(this);
+         PreReqsON("PR2");
+         PostReqsON("OS");
+         PreLinksON("PR2_AS");
+         PostLinksON("AS_OS")
          })
         .mouseout(function(){
          BaseOFF(this); 
@@ -66,7 +123,20 @@
 
     });
 
+    $("#MC")
 
+        .mouseover(function(){
+        BaseON(this);
+         PreReqsON("PR2");
+         PreLinksON("PR2_MC");
+         })
+        .mouseout(function(){
+         BaseOFF(this); 
+         PrereqsOFF("PR2");
+         PreLinksOFF("PR2_MC");
+
+
+    });
 
 
 
@@ -97,7 +167,7 @@ $("#PR2_DSA").effect('slide', { direction: 'right', mode: 'show' }, 500);
 $("#DSA").mouseover(function(){
       $("#AD").css("background-image","linear-gradient(0deg,  hotpink 50%, teal 50%)").css("font-weight","bold").css("color","black");
       $("#TOC").css("background-image","linear-gradient(0deg,  hotpink 50%, teal 50%)");
-      $("#OS").css("background-image","linear-gradient(90deg,  hotpink 10%, teal 10%)");
+      $("#OS").css("background-image","linear-gradient(0deg,  teal 50%, hotpink 50%)");
 
   });
 
@@ -110,7 +180,7 @@ $("#DSA").mouseover(function(){
 
 
 $("#CA").mouseover(function(){
-      $("#OS").css("background-image","linear-gradient(90deg,  teal 20%, hotpink 80%)").css("color","black");
+      $("#OS").css("background-image","linear-gradient(0deg,  teal 50%, hotpink 50%)").css("color","black");
   });
 
         $("#CA").mouseout(function(){
@@ -120,8 +190,8 @@ $("#CA").mouseover(function(){
 
 
 $("#DSA").mouseover(function(){
-      $("#AD").css("background-image","linear-gradient(90deg,  hotpink 10%, teal 10%)");
-      $("#TOC").css("background-image","linear-gradient(90deg,  hotpink 10%, teal 10%)");
+      $("#AD").css("background-image","linear-gradient(0deg,  hotpink 50%, teal 50%)");
+      $("#TOC").css("background-image","linear-gradient(0deg,  hotpink 50%, teal 50%)");
   });
 
         $("#DSA").mouseout(function(){
@@ -152,99 +222,100 @@ $("#DSA").mouseover(function(){
 
     });
 
-
-    $("#CC")
+    $("#AD")
 
         .mouseover(function(){
         BaseON(this);
-         PreReqsON("OOP");
-         PreLinksON("OOP_CC");
+         PreReqsON("DSA");
+         PreLinksON("DM_DSA_AD");
              PrePreReqsON("PR2");
-             PrePreLinksON("PR2_OOP");
+             PrePreLinksON("PR2_DSA");
          })
         .mouseout(function(){
          BaseOFF(this); 
          PreReqsOFF("OOP");
          PreLinksOFF("OOP_CC"); 
              PrePreReqsOFF("PR2");
-             PrePreLinksOFF("PR2_OOP");      
+             PrePreLinksOFF("PR2_DSA");      
 
     });
 
-    $("#CRY")
+
+    $("#TOC")
 
         .mouseover(function(){
         BaseON(this);
-         PreReqsON("OOP");
-         PreLinksON("OOP_CRY");
+         PreReqsON("DSA");
+         PreLinksON("DM_DSA_TOC");
              PrePreReqsON("PR2");
-             PrePreLinksON("PR2_OOP");
+             PrePreLinksON("PR2_DSA");
          })
         .mouseout(function(){
          BaseOFF(this); 
          PreReqsOFF("OOP");
          PreLinksOFF("OOP_CRY"); 
              PrePreReqsOFF("PR2");
-             PrePreLinksOFF("PR2_OOP");      
+             PrePreLinksOFF("PR2_DSA");      
 
     });
 
-    $("#SE")
+
+
+    $("#CDS")
 
         .mouseover(function(){
         BaseON(this);
-         PreReqsON("OOP");
-         PreLinksON("OOP_SE");
+         PreReqsON("DSA");
+         PreLinksON("DSA_CDS");
              PrePreReqsON("PR2");
-             PrePreLinksON("PR2_OOP");
+             PrePreLinksON("PR2_DSA");
          })
         .mouseout(function(){
          BaseOFF(this); 
          PreReqsOFF("OOP");
          PreLinksOFF("OOP_SE"); 
              PrePreReqsOFF("PR2");
-             PrePreLinksOFF("PR2_OOP");      
+             PrePreLinksOFF("PR2_DSA");      
 
     });
 
-    $("#BD")
+    $("#PL")
 
         .mouseover(function(){
         BaseON(this);
-         PreReqsON("OOP");
-         PreLinksON("OOP_BD");
+         PreReqsON("DSA");
+         PreLinksON("DSA_PL");
              PrePreReqsON("PR2");
-             PrePreLinksON("PR2_OOP");
+             PrePreLinksON("PR2_DSA");
          })
         .mouseout(function(){
          BaseOFF(this); 
          PreReqsOFF("OOP");
          PreLinksOFF("OOP_BD"); 
              PrePreReqsOFF("PR2");
-             PrePreLinksOFF("PR2_OOP");      
+             PrePreLinksOFF("PR2_DSA");      
 
     });
 
-    $("#DBM")
+    $("#AI")
 
         .mouseover(function(){
         BaseON(this);
-         PreReqsON("OOP");
-         PreLinksON("OOP_DBM");
+         PreReqsON("DSA");
+         PreLinksON("DSA_AI");
              PrePreReqsON("PR2");
-             PrePreLinksON("PR2_OOP");
+             PrePreLinksON("PR2_DSA");
          })
         .mouseout(function(){
          BaseOFF(this); 
          PreReqsOFF("OOP");
          PreLinksOFF("OOP_DBM"); 
              PrePreReqsOFF("PR2");
-             PrePreLinksOFF("PR2_OOP");      
+             PrePreLinksOFF("PR2_DSA");      
 
     });
 
-
-    $("#DSA")
+    $("#OS")
 
         .mouseover(function(){
         BaseON(this);
@@ -262,97 +333,99 @@ $("#DSA").mouseover(function(){
 
     });
 
-    $("#AD")
+
+    $("#CC")
 
         .mouseover(function(){
         BaseON(this);
          PreReqsON("DSA","DM");
             PreLinksON("DM_DSA_AD", "DM_DSA_TOC");
              PrePreReqsON("PR2");
-             PrePreLinksON("PR2_DSA");
+             PrePreLinksON("PR2_OOP");
          })
         .mouseout(function(){
          BaseOFF(this); 
          PreReqsOFF("DSA","DM");
             PreLinksOFF("DM_DSA_AD", "DM_DSA_TOC"); 
              PrePreReqsOFF("PR2");
-             PrePreLinksOFF("PR2_DSA");      
+             PrePreLinksOFF("PR2_OOP");      
 
     });
 
-
-    $("#TOC")
+    $("#CRY")
 
         .mouseover(function(){
         BaseON(this);
          PreReqsON("DSA","DM");
             PreLinksON("DM_DSA_TOC","DM_DSA_AD");
              PrePreReqsON("PR2");
-             PrePreLinksON("PR2_DSA");
+             PrePreLinksON("PR2_OOP");
          })
         .mouseout(function(){
          BaseOFF(this); 
          PreReqsOFF("DSA","DM");
             PreLinksOFF("DM_DSA_TOC", "DM_DSA_AD"); 
              PrePreReqsOFF("PR2");
-             PrePreLinksOFF("PR2_DSA");      
+             PrePreLinksOFF("PR2_OOP");      
 
     });
 
-
-    $("#CDS")
+    $("#SE")
 
         .mouseover(function(){
         BaseON(this);
-         PreReqsON("DSA");
-         PreLinksON("DSA_CDS");
+         PreReqsON("OOP");
+         PreLinksON("OOP_SE");
              PrePreReqsON("PR2");
-             PrePreLinksON("PR2_DSA");
+             PrePreLinksON("PR2_OOP");
          })
         .mouseout(function(){
          BaseOFF(this); 
          PreReqsOFF("DSA");
          PreLinksOFF("DSA_CDS"); 
              PrePreReqsOFF("PR2");
-             PrePreLinksOFF("PR2_DSA");      
+             PrePreLinksOFF("PR2_OOP");      
 
     });
 
-    $("#PL")
+
+    $("#BD")
 
         .mouseover(function(){
         BaseON(this);
-         PreReqsON("DSA");
-         PreLinksON("DSA_PL");
+         PreReqsON("OOP");
+         PreLinksON("OOP_BD");
              PrePreReqsON("PR2");
-             PrePreLinksON("PR2_DSA");
+             PrePreLinksON("PR2_OOP");
          })
         .mouseout(function(){
          BaseOFF(this); 
          PreReqsOFF("DSA");
          PreLinksOFF("DSA_PL"); 
              PrePreReqsOFF("PR2");
-             PrePreLinksOFF("PR2_DSA");      
+             PrePreLinksOFF("PR2_OOP");      
 
     });
 
-    $("#AI")
+    $("#DBM")
 
         .mouseover(function(){
         BaseON(this);
-         PreReqsON("DSA");
-         PreLinksON("DSA_AI");
+         PreReqsON("OOP");
+         PreLinksON("OOP_DBM");
              PrePreReqsON("PR2");
-             PrePreLinksON("PR2_DSA");
+             PrePreLinksON("PR2_OOP");
          })
         .mouseout(function(){
          BaseOFF(this); 
          PreReqsOFF("DSA");
          PreLinksOFF("DSA_AI"); 
              PrePreReqsOFF("PR2");
-             PrePreLinksOFF("PR2_DSA");      
+             PrePreLinksOFF("PR2_OOP");      
 
     });
+
+    //*/
 
 
 });
@@ -360,11 +433,11 @@ $("#DSA").mouseover(function(){
 // ------------ BUTTON FUNCTIONS
 
 function BaseON(){
-   $(arguments).css({"border":"5px solid black","font-weight":"bold","color":"black","background-color":"pink"});}
+   $(arguments).css({"border":"5px solid black","font-weight":"bold","color":"black","background-color":"orangered"});}
 
 function PreReqsON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("border","5px solid black").css("font-weight", "bold").css("color","black").css("background-color", "lawngreen");
+        $("#" + arguments[i]).css("border","5px solid black").css({"clip-path": "circle(100px at 35px 35px)"}).css("font-weight", "bold").css("color","black").css("background-color", "lawngreen");
     }
 }
 
@@ -428,13 +501,13 @@ function PostReqsOFF(){
 
 function PreLinksON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "6").css("stroke-dasharray","1000").css("stroke-dashoffset","1000").css("animation","dash 4s linear forwards");
+        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "6");
     }
 }
 
 function PrePreLinksON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "4").css("stroke-dasharray","1000").css("stroke-dashoffset","1000").css("animation","dash 2s linear forwards");
+        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "4");
     }
 }
 
@@ -454,13 +527,13 @@ function PrePreLinksOFF(){
 
 function PostLinksON(){
    for (var i = arguments.length - 1; i >= 0; i--) {
-       $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "7");
+        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "7");
     }
-
 }
 
-function PostLinksOFF() {
-    for (var i = arguments.length - 1; i >= 0; i--) {
+function PostLinksOFF(){
+   for (var i = arguments.length - 1; i >= 0; i--) {
         $("#" + arguments[i]).css("stroke", "purple").css("strokeWidth", "2");
     }
 }
+
