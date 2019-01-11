@@ -380,24 +380,24 @@ $("#AS").mouseover(function(){
 // ------------ BUTTON FUNCTIONS
 
 function BaseON(){
-   $(arguments).css({"font-weight":"bold","color":"black","background-color":"orangered"});}
+   $(arguments).css({"border":"5px solid black","font-weight":"bold","color":"black","background-color":"orangered"});}
 
 function PreReqsON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("border","5px solid black").css("font-weight", "bold").css("color","black").css("background-color", "lawngreen");
+        $("#" + arguments[i]).css("font-weight", "bold").css("color","black").css("background-color", "lawngreen");
     }
 }
 
 function PrePreReqsON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("border","5px solid black").css("font-weight", "bold").css("color","black").css("background-color", "lightgreen");
+        $("#" + arguments[i])css("font-weight", "bold").css("color","black").css("background-color", "lightgreen");
     }
 }
 
 
 function PrePreReqsOFF(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("border","0px solid black").css("font-weight", "normal").css("color","white").css("background-color", "teal");
+        $("#" + arguments[i]).css("font-weight", "normal").css("color","white").css("background-color", "teal");
     }
 }
 
