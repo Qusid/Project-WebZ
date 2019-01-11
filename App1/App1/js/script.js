@@ -429,7 +429,7 @@ function PreReqsOFF(){
 
 function PostReqsON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("border","5px solid black").css("font-weight", "bold").css("color","black").css("background-color", "hotpink");
+        $("#" + arguments[i]).css("border","5px solid black").css("font-weight", "bold").css("color","black").css("background-color", "orangered");
     }
 }
 
