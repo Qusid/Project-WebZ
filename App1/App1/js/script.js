@@ -26,25 +26,13 @@
          PreLinksON("PR2_MC");
          })
         .mouseout(function(){
-         BaseOFF(this); s
+         BaseOFF(this); 
          PreReqsOFF("PR2");
          PreLinksOFF("PR2_MC");     
 
     });
 
-    $("#DM")
 
-        .mouseover(function(){
-        BaseON(this);
-         PostReqsON("AD","TOC");
-         PostLinksON("DM_DSA_AD","DM_DSA_TOC");
-         })
-        .mouseout(function(){
-         BaseOFF(this); 
-         PreReqsOFF("AD","TOC");
-         PreLinksOFF("DM_DSA_AD","DM_DSA_TOC");     
-
-    });
 
 
 
@@ -71,40 +59,28 @@
 
 
 $("#DM").mouseover(function(){
-      $("#AD").css("background-image","linear-gradient(0deg,  teal 50%, hotpink 50%)");
-      $("#TOC").css("background-image","linear-gradient(0deg,  teal 50%, hotpink 50%)");
+      $("#AD").css("background-image","linear-gradient(90deg,  orangered 10%, teal 10%)").css("font-weight","bold").css("color","black");
+      $("#TOC").css("background-image","linear-gradient(90deg,  orangered 10%, teal 10%)").css("font-weight","bold").css("color","black");
   });
 
         $("#DM").mouseout(function(){
-      $("#AD").css("background", "teal");
-      $("#TOC").css("background", "teal");
+      $("#AD").css("background", "teal").css("font-weight","normal").css("color","white");
+      $("#TOC").css("background", "teal").css("font-weight","normal").css("color","white");
   });
 
- $("#DM").click(function(){
-
-
-    $("#AD").animate({width: '300px'});
-
-
-
-$("#PR2_DSA").effect('slide', { direction: 'right', mode: 'show' }, 500);
-
-  });  
-
-//.effect('slide', { direction: 'right', mode: 'show' }, 500);
 
 
 $("#DSA").mouseover(function(){
-      $("#AD").css("background-image","linear-gradient(0deg,  hotpink 50%, teal 50%)").css("font-weight","bold").css("color","black");
-      $("#TOC").css("background-image","linear-gradient(0deg,  hotpink 50%, teal 50%)");
-      $("#OS").css("background-image","linear-gradient(90deg,  hotpink 10%, teal 10%)");
+      $("#AD").css("background-image","linear-gradient(90deg,  orangered 10%, teal 10%)").css("font-weight","bold").css("color","black");
+      $("#TOC").css("background-image","linear-gradient(90deg,  orangered 10%, teal 10%)").css("font-weight","bold").css("color","black");
+      $("#OS").css("background-image","linear-gradient(90deg,  orangered 10%, teal 10%)").css("font-weight","bold").css("color","black");
 
   });
 
         $("#DSA").mouseout(function(){
-      $("#AD").css("background", "teal").css("");
-      $("#TOC").css("background", "teal");
-      $("#OS").css("background", "teal");
+      $("#AD").css("background", "teal").css("font-weight","normal").css("color","white");
+      $("#TOC").css("background", "teal").css("font-weight","normal").css("color","white");
+      $("#OS").css("background", "teal").css("font-weight","normal").css("color","white");
   });
 
 
@@ -117,17 +93,6 @@ $("#CA").mouseover(function(){
       $("#OS").css("background", "teal");
   });
 
-
-
-$("#DSA").mouseover(function(){
-      $("#AD").css("background-image","linear-gradient(90deg,  hotpink 10%, teal 10%)");
-      $("#TOC").css("background-image","linear-gradient(90deg,  hotpink 10%, teal 10%)");
-  });
-
-        $("#DSA").mouseout(function(){
-      $("#AD").css("background", "teal");
-      $("#TOC").css("background", "teal");
-  });
 
 
 
@@ -267,14 +232,14 @@ $("#DSA").mouseover(function(){
         .mouseover(function(){
         BaseON(this);
          PreReqsON("DSA","DM");
-            PreLinksON("DM_DSA_AD", "DM_DSA_TOC");
+         PreLinksON("DM_DSA_AD");
              PrePreReqsON("PR2");
              PrePreLinksON("PR2_DSA");
          })
         .mouseout(function(){
          BaseOFF(this); 
          PreReqsOFF("DSA","DM");
-            PreLinksOFF("DM_DSA_AD", "DM_DSA_TOC"); 
+         PreLinksOFF("DM_DSA_AD"); 
              PrePreReqsOFF("PR2");
              PrePreLinksOFF("PR2_DSA");      
 
@@ -286,14 +251,14 @@ $("#DSA").mouseover(function(){
         .mouseover(function(){
         BaseON(this);
          PreReqsON("DSA","DM");
-            PreLinksON("DM_DSA_TOC","DM_DSA_AD");
+         PreLinksON("DM_DSA_TOC");
              PrePreReqsON("PR2");
              PrePreLinksON("PR2_DSA");
          })
         .mouseout(function(){
          BaseOFF(this); 
          PreReqsOFF("DSA","DM");
-            PreLinksOFF("DM_DSA_TOC", "DM_DSA_AD"); 
+         PreLinksOFF("DM_DSA_TOC"); 
              PrePreReqsOFF("PR2");
              PrePreLinksOFF("PR2_DSA");      
 
@@ -360,7 +325,7 @@ $("#DSA").mouseover(function(){
 // ------------ BUTTON FUNCTIONS
 
 function BaseON(){
-   $(arguments).css({"border":"5px solid black","font-weight":"bold","color":"black","background-color":"pink"});}
+   $(arguments).css({"border":"5px solid black","font-weight":"bold","color":"black","background-color":"orangered"});}
 
 function PreReqsON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
