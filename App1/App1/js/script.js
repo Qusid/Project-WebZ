@@ -97,7 +97,7 @@ $("#PR2_DSA").effect('slide', { direction: 'right', mode: 'show' }, 500);
 $("#DSA").mouseover(function(){
       $("#AD").css("background-image","linear-gradient(0deg,  hotpink 50%, teal 50%)").css("font-weight","bold").css("color","black");
       $("#TOC").css("background-image","linear-gradient(0deg,  hotpink 50%, teal 50%)");
-      $("#OS").css("background-image","linear-gradient(0deg,  teal 50%, hotpink 50%)");
+      $("#OS").css("background-image","linear-gradient(90deg,  hotpink 10%, teal 10%)");
 
   });
 
@@ -110,7 +110,7 @@ $("#DSA").mouseover(function(){
 
 
 $("#CA").mouseover(function(){
-      $("#OS").css("background-image","linear-gradient(0deg,  teal 50%, hotpink 50%)").css("color","black");
+      $("#OS").css("background-image","linear-gradient(90deg,  teal 20%, hotpink 80%)").css("color","black");
   });
 
         $("#CA").mouseout(function(){
@@ -120,8 +120,8 @@ $("#CA").mouseover(function(){
 
 
 $("#DSA").mouseover(function(){
-      $("#AD").css("background-image","linear-gradient(0deg,  hotpink 50%, teal 50%)");
-      $("#TOC").css("background-image","linear-gradient(0deg,  hotpink 50%, teal 50%)");
+      $("#AD").css("background-image","linear-gradient(90deg,  hotpink 10%, teal 10%)");
+      $("#TOC").css("background-image","linear-gradient(90deg,  hotpink 10%, teal 10%)");
   });
 
         $("#DSA").mouseout(function(){
@@ -360,7 +360,7 @@ $("#DSA").mouseover(function(){
 // ------------ BUTTON FUNCTIONS
 
 function BaseON(){
-   $(arguments).css({"border":"5px solid black","font-weight":"bold","color":"black","background-color":"orangered"});}
+   $(arguments).css({"border":"5px solid black","font-weight":"bold","color":"black","background-color":"pink"});}
 
 function PreReqsON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
