@@ -75,6 +75,7 @@ $("#DSA").mouseover(function(){
       $("#TOC").css("background-image","linear-gradient(90deg,  orangered 10%, teal 10%)").css("font-weight","bold").css("color","black");
       $("#OS").css("background-image","linear-gradient(90deg,  orangered 10%, teal 10%)").css("font-weight","bold").css("color","black");
 
+
   });
 
         $("#DSA").mouseout(function(){
@@ -86,16 +87,70 @@ $("#DSA").mouseover(function(){
 
 
 $("#CA").mouseover(function(){
-      $("#OS").css("background-image","linear-gradient(90deg,  teal 20%, hotpink 80%)").css("color","black");
+      $("#OS").css("background-image","linear-gradient(90deg,  orangered 10%, teal 10%)").css("font-weight","bold").css("color","black");
   });
 
         $("#CA").mouseout(function(){
-      $("#OS").css("background", "teal");
+      $("#OS").css("background", "teal").css("font-weight","normal").css("color","white");
+  });
+
+$("#AS").mouseover(function(){
+      $("#OS").css("background-image","linear-gradient(90deg,  orangered 10%, teal 10%)").css("font-weight","bold").css("color","black");
+  });
+
+        $("#AS").mouseout(function(){
+      $("#OS").css("background", "teal").css("font-weight","normal").css("color","white");
   });
 
 
 
 
+    $("#DM")
+
+        .mouseover(function(){
+        BaseON(this);
+        PostLinksON("DM-DSA_AD")
+         })
+        .mouseout(function(){
+         BaseOFF(this); 
+         PostLinksOFF("DM-DSA_AD")
+
+    });
+
+
+
+    $("#CA")
+
+        .mouseover(function(){
+        BaseON(this);
+         PreReqsON("PR2");
+         PreLinksON("PR2_CA");
+         PostLinksON("CA_OS")
+         })
+        .mouseout(function(){
+         BaseOFF(this); 
+         PreReqsOFF("PR2");
+         PreLinksOFF("PR2_CA");
+         PostLinksOFF("CA_OS")
+
+    });
+
+
+    $("#AS")
+
+        .mouseover(function(){
+        BaseON(this);
+         PreReqsON("PR2");
+         PreLinksON("PR2_AS");
+         PostLinksON("AS_OS")
+         })
+        .mouseout(function(){
+         BaseOFF(this); 
+         PreReqsOFF("PR2");
+         PreLinksOFF("PR2_AS");
+         PostLinksOFF("AS_OS")
+
+    });
 
 
 
@@ -393,13 +448,13 @@ function PostReqsOFF(){
 
 function PreLinksON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "6").css("stroke-dasharray","1000").css("stroke-dashoffset","1000").css("animation","dash 4s linear forwards");
+        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "6");
     }
 }
 
 function PrePreLinksON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "4").css("stroke-dasharray","1000").css("stroke-dashoffset","1000").css("animation","dash 2s linear forwards");
+        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "4");
     }
 }
 
