@@ -5,13 +5,12 @@
         .mouseover(function(){
         BaseON(this);
          PostReqsON("DSA","CA", "AS","MC","OOP");
-         PostPostReqsON("CDS ", "PL", "AI", "OS", "CC", "CRY", "SE", "BD", "DBM");
-         PostLinksON("PR2_DSA","PR2_CA","PR2_AS","PR2_MC","PR2_OOP", "DSA_CDS", "DSA_PL", "DSA_AI", "OOP_CC", "OOP_CRY", "OOP_SE", "OOP_BD", "OOP_DBM");
+         PostLinksON("PR2_DSA","PR2_CA","PR2_AS","PR2_MC","PR2_OOP");
          })
         .mouseout(function(){
          BaseOFF(this); 
-         PostReqsOFF("DSA","CA", "AS","MC","OOP","CDS", "PL", "AI", "OS", "CC", "CRY", "SE", "BD", "DBM");
-         PostLinksOFF("PR2_DSA","PR2_CA","PR2_AS","PR2_MC","PR2_OOP", "DSA_CDS", "DSA_PL", "DSA_AI", "OOP_CC", "OOP_CRY", "OOP_SE", "OOP_BD", "OOP_DBM");     
+         PostReqsOFF("DSA","CA", "AS","MC","OOP");
+         PostLinksOFF("PR2_DSA","PR2_CA","PR2_AS","PR2_MC","PR2_OOP");     
 
     });
      
@@ -123,11 +122,11 @@ $("#AS").mouseover(function(){
 
         .mouseover(function(){
         BaseON(this);
-        PostLinksON("DM-DSA_AD")
+        thinPostLinksON("DM-DSA_AD","DM-DSA_t", "DM-DSA_b", "DM-DSA_TOC")
          })
         .mouseout(function(){
          BaseOFF(this); 
-         PostLinksOFF("DM-DSA_AD")
+         PostLinksOFF("DM-DSA_AD","DM-DSA_t", "DM-DSA_b", "DM-DSA_TOC")
 
     });
 
@@ -140,12 +139,13 @@ $("#AS").mouseover(function(){
          PreReqsON("PR2");
          PreLinksON("PR2_CA");
          PostLinksON("CA_OS")
+         thinPostLinksON("DSA_OS","CA_OS","AS_OS")
          })
         .mouseout(function(){
          BaseOFF(this); 
          PreReqsOFF("PR2");
          PreLinksOFF("PR2_CA");
-         PostLinksOFF("CA_OS")
+         PostLinksOFF("CA_OS","DSA_OS","CA_OS","AS_OS")
 
     });
 
@@ -157,12 +157,13 @@ $("#AS").mouseover(function(){
          PreReqsON("PR2");
          PreLinksON("PR2_AS");
          PostLinksON("AS_OS")
+         thinPostLinksON("DSA_OS","AS_OS","CA_OS")
          })
         .mouseout(function(){
          BaseOFF(this); 
          PreReqsOFF("PR2");
          PreLinksOFF("PR2_AS");
-         PostLinksOFF("AS_OS")
+         PostLinksOFF("AS_OS","DSA_OS","AS_OS","CA_OS")
 
     });
 
@@ -279,21 +280,20 @@ $("#AS").mouseover(function(){
 
 
     $("#DSA")
-
         .mouseover(function(){
         BaseON(this);
          PreReqsON("PR2");
          PostReqsON("CDS","PL","AI");
          PreLinksON("PR2_DSA");
          PostLinksON("DSA_AD","DSA_TOC","DSA_CDS","DSA_PL","DSA_AI")
+         thinPostLinksON("DM-DSA_b","DM-DSA_t","DM-DSA_AD","DM-DSA_TOC","DSA_OS","CA_OS","AS_OS")
          })
         .mouseout(function(){
          BaseOFF(this); 
          PreReqsOFF("PR2");
          PostReqsOFF("CDS","PL","AI");
          PreLinksOFF("PR2_DSA");  
-         PostLinksOFF("DSA_AD","DSA_TOC","DSA_CDS","DSA_PL","DSA_AI"); 
-
+         PostLinksOFF("DSA_AD","DSA_TOC","DSA_CDS","DSA_PL","DSA_AI","DM-DSA_b","DM-DSA_t","DM-DSA_AD","DM-DSA_TOC","DSA_OS","CA_OS","AS_OS"); 
     });
 
     $("#AD")
@@ -301,14 +301,14 @@ $("#AS").mouseover(function(){
         .mouseover(function(){
         BaseON(this);
          PreReqsON("DSA","DM");
-            PreLinksON("DM_DSA_AD", "DM_DSA_TOC");
+            PreLinksON("DM-DSA_b","DM-DSA_t","DM-DSA_AD");
              PrePreReqsON("PR2");
              PrePreLinksON("PR2_DSA");
          })
         .mouseout(function(){
          BaseOFF(this); 
          PreReqsOFF("DSA","DM");
-            PreLinksOFF("DM_DSA_AD", "DM_DSA_TOC"); 
+            PreLinksOFF("DM-DSA_b","DM-DSA_t","DM-DSA_AD"); 
              PrePreReqsOFF("PR2");
              PrePreLinksOFF("PR2_DSA");      
 
@@ -320,14 +320,14 @@ $("#AS").mouseover(function(){
         .mouseover(function(){
         BaseON(this);
          PreReqsON("DSA","DM");
-            PreLinksON("DM_DSA_TOC", "DM_DSA_AD");
+            PreLinksON("DM-DSA_b","DM-DSA_t","DM-DSA_TOC");
              PrePreReqsON("PR2");
              PrePreLinksON("PR2_DSA");
          })
         .mouseout(function(){
          BaseOFF(this); 
          PreReqsOFF("DSA","DM");
-            PreLinksOFF("DM_DSA_TOC", "DM_DSA_AD"); 
+            PreLinksOFF("DM-DSA_b","DM-DSA_t","DM-DSA_TOC"); 
              PrePreReqsOFF("PR2");
              PrePreLinksOFF("PR2_DSA");      
 
@@ -490,7 +490,12 @@ function PostLinksON(){
    for (var i = arguments.length - 1; i >= 0; i--) {
        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "7");
     }
+}
 
+function thinPostLinksON(){
+   for (var i = arguments.length - 1; i >= 0; i--) {
+       $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "3.5");
+    }
 }
 
 function PostLinksOFF() {
