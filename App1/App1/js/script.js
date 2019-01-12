@@ -402,6 +402,7 @@ function PreReqsON(){
     }
 }
 
+/*
 function PrePreReqsON(){
     for (var i = arguments.length - 1; i >= 0; i--) {
         $("#" + arguments[i]).css("color","black").css("background-color", "lightgreen");
@@ -414,6 +415,8 @@ function PrePreReqsOFF(){
         $("#" + arguments[i]).css("font-weight", "normal").css("color","white").css("background-color", "teal");
     }
 }
+
+*/
 
 function PostPostReqsOff(){
     for (var i = arguments.length - 1; i >= 0; i--) {
@@ -466,11 +469,6 @@ function PreLinksON(){
     }
 }
 
-function PrePreLinksON(){
-    for (var i = arguments.length - 1; i >= 0; i--) {
-        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "4");
-    }
-}
 
 
 function PreLinksOFF(){
@@ -479,11 +477,20 @@ function PreLinksOFF(){
     }
 }
 
+/*
+function PrePreLinksON(){
+    for (var i = arguments.length - 1; i >= 0; i--) {
+        $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "4");
+    }
+}
+
 function PrePreLinksOFF(){
    for (var i = arguments.length - 1; i >= 0; i--) {
         $("#" + arguments[i]).css("stroke", "black").css("strokeWidth", "2");
     }
 }
+
+*/
 
 
 function PostLinksON(){
