@@ -61,11 +61,13 @@
 $("#DM").mouseover(function(){
       $("#AD").css("background-image","linear-gradient(90deg,  cyan 10%, teal 10%)").css("font-weight","bold").css("color","black");
       $("#TOC").css("background-image","linear-gradient(90deg,  cyan 10%, teal 10%)").css("font-weight","bold").css("color","black");
+      $("#DSA").css("background-image","linear-gradient(90deg,  teal 90%, cyan 90%)").css("font-weight","bold").css("color","black");
   });
 
         $("#DM").mouseout(function(){
       $("#AD").css("background", "teal").css("font-weight","normal").css("color","white");
       $("#TOC").css("background", "teal").css("font-weight","normal").css("color","white");
+      $("#DSA").css("background", "teal").css("font-weight","normal").css("color","white");
   });
 
 
@@ -92,18 +94,26 @@ $("#DSA").mouseover(function(){
 
 $("#CA").mouseover(function(){
       $("#OS").css("background-image","linear-gradient(90deg,  cyan 10%, teal 10%)").css("font-weight","bold").css("color","black");
+      $("#AS").css("background-image","linear-gradient(90deg,  teal 90%, cyan 90%)").css("font-weight","bold").css("color","black");
+      $("#DSA").css("background-image","linear-gradient(90deg,  teal 90%, cyan 90%)").css("font-weight","bold").css("color","black");
   });
 
         $("#CA").mouseout(function(){
       $("#OS").css("background", "teal").css("font-weight","normal").css("color","white");
+      $("#AS").css("background", "teal").css("font-weight","normal").css("color","white");
+      $("#DSA").css("background", "teal").css("font-weight","normal").css("color","white");
   });
 
 $("#AS").mouseover(function(){
       $("#OS").css("background-image","linear-gradient(90deg,  cyan 10%, teal 10%)").css("font-weight","bold").css("color","black");
+      $("#CA").css("background-image","linear-gradient(90deg,  teal 90%, cyan 90%)").css("font-weight","bold").css("color","black");
+      $("#DSA").css("background-image","linear-gradient(90deg,  teal 90%, cyan 90%)").css("font-weight","bold").css("color","black");
   });
 
         $("#AS").mouseout(function(){
       $("#OS").css("background", "teal").css("font-weight","normal").css("color","white");
+      $("#CA").css("background", "teal").css("font-weight","normal").css("color","white");
+      $("#DSA").css("background", "teal").css("font-weight","normal").css("color","white");
   });
 
 
